@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Academy — Free Online Islamic Education | learn.sakib.bond</title>
+  <meta name="description" content="Learn Islam online. Free courses in Quran recitation, Hadith sciences, Fiqh, Seerah, Arabic language, and Islamic theology on learn.sakib.bond." />
+  <meta name="keywords" content="Islamic learning, learn Islam online, Quran course, Tajweed, Fiqh, Seerah, Arabic grammar, Islamic academy, learn.sakib.bond" />
+  <meta name="author" content="learn.sakib.bond" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a2463" />
+  <link rel="canonical" href="https://learn.sakib.bond/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Islamic Academy — learn.sakib.bond" />
+  <meta property="og:description" content="Structured Islamic education courses, interactive knowledge quizzes, and classical texts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://learn.sakib.bond/" />
+  <meta property="og:site_name" content="Islamic Learning Academy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Islamic Academy — learn.sakib.bond" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Islamic Academy",
+    "url": "https://learn.sakib.bond",
+    "description": "Comprehensive online Islamic academy providing structured courses in Quran, Fiqh, and Islamic sciences."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-base: #030c1d;
+      --bg-surface: #07193b;
+      --bg-card: #0b2454;
+      --bg-card-hover: #0f3070;
+      --blue-primary: #0a2463;
+      --blue-accent: #3b82f6;
+      --gold-primary: #fca311;
+      --gold-bright: #fbbf24;
+      --text-main: #f8fafc;
+      --text-muted: #93c5fd;
+      --border-color: rgba(252, 163, 17, 0.25);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f0f4f8;
+      --bg-surface: #ffffff;
+      --bg-card: #e2e8f0;
+      --bg-card-hover: #cbd5e1;
+      --blue-primary: #1e3a8a;
+      --blue-accent: #2563eb;
+      --gold-primary: #d97706;
+      --gold-bright: #b45309;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: rgba(217, 119, 6, 0.2);
+      --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bg-pattern {
+      position: fixed; inset: 0;
+      background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+      background-size: 26px 26px; pointer-events: none; z-index: 0;
+    }
+
+    /* Halalspark Ad styling */
+    .halalspark-ad-container {
+      width: 100%; display: flex; justify-content: center; margin: 18px 0; position: relative; z-index: 10;
+    }
+    .halalspark-ad {
+      border: 1px dashed var(--gold-primary); border-radius: var(--radius-sm);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(7, 25, 59, 0.95), rgba(3, 12, 29, 0.95));
+      color: var(--gold-bright); font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); padding: 10px; text-align: center;
+    }
+    .halalspark-ad .ad-badge {
+      font-size: 10px; text-transform: uppercase; padding: 2px 8px;
+      background: rgba(252, 163, 17, 0.15); border-radius: 4px; margin-bottom: 4px; color: var(--text-muted);
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-surface); border-bottom: 1px solid var(--border-color);
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px);
+    }
+    .navbar {
+      max-width: 1400px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+      color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
+    }
+    .brand i { font-size: 24px; color: var(--gold-primary); }
+    .brand span { font-size: 12px; display: block; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .theme-btn {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      color: var(--gold-bright); width: 38px; height: 38px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;
+    }
+    .theme-btn:hover { background: var(--bg-card-hover); border-color: var(--gold-bright); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 44px 24px 36px; text-align: center; position: relative; z-index: 5;
+    }
+    .hero-arabic {
+      font-family: 'Amiri', serif; font-size: 28px; color: var(--gold-bright);
+      margin-bottom: 8px; direction: rtl;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px);
+      color: var(--gold-bright); margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 16px; color: var(--text-muted); max-width: 680px; margin: 0 auto 24px;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .stat-badge {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      padding: 10px 18px; border-radius: var(--radius-md); font-size: 13px;
+    }
+    .stat-badge strong { color: var(--gold-bright); font-size: 18px; display: block; }
+
+    /* Category Filter & Search */
+    .catalog-controls {
+      max-width: 1400px; margin: 0 auto 24px; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+      position: relative; z-index: 5;
+    }
+    .search-input {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: 20px; padding: 8px 18px; color: var(--text-main); font-size: 14px;
+      outline: none; width: 280px;
+    }
+    .search-input:focus { border-color: var(--gold-primary); }
+
+    .category-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      color: var(--text-muted); padding: 6px 14px; border-radius: 20px; font-size: 12px;
+      cursor: pointer; transition: 0.2s;
+    }
+    .pill:hover, .pill.active {
+      background: var(--gold-primary); color: #000; border-color: var(--gold-primary); font-weight: 600;
+    }
+
+    /* Course Cards */
+    .courses-grid {
+      max-width: 1400px; margin: 0 auto; padding: 0 24px 40px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 24px;
+      position: relative; z-index: 5;
+    }
+    .course-card {
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    .course-card:hover { transform: translateY(-5px); border-color: var(--gold-bright); }
+    .course-top {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+    }
+    .category-badge {
+      background: rgba(252, 163, 17, 0.15); color: var(--gold-bright);
+      font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px;
+    }
+    .level-badge { font-size: 12px; color: var(--text-muted); }
+    .course-title {
+      font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold-bright);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .course-instructor {
+      font-size: 13px; color: var(--blue-accent); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+    }
+    .course-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+    .course-meta {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border-color);
+      padding-top: 12px; font-size: 12px; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .btn-enroll {
+      background: var(--blue-primary); border: 1px solid var(--gold-primary);
+      color: var(--gold-bright); padding: 10px; border-radius: var(--radius-sm);
+      font-weight: 600; cursor: pointer; text-align: center; transition: 0.2s;
+    }
+    .btn-enroll:hover { background: var(--gold-primary); color: #000; }
+
+    /* Interactive Quiz Section */
+    .quiz-section {
+      max-width: 900px; margin: 40px auto; padding: 32px 24px;
+      background: var(--bg-surface); border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
+      position: relative; z-index: 5;
+    }
+    .quiz-section h2 {
+      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 24px;
+      text-align: center; margin-bottom: 8px;
+    }
+    .quiz-section p { text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+    .quiz-question-box {
+      background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; margin-bottom: 20px;
+    }
+    .quiz-q-title { font-weight: 600; font-size: 16px; margin-bottom: 14px; color: var(--text-main); }
+    .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+    .quiz-option {
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      padding: 12px 16px; border-radius: var(--radius-sm); cursor: pointer; font-size: 14px;
+      display: flex; align-items: center; gap: 10px; transition: 0.2s;
+    }
+    .quiz-option:hover { border-color: var(--gold-primary); background: var(--bg-card-hover); }
+    .quiz-option.correct { background: rgba(16, 185, 129, 0.2); border-color: #10b981; font-weight: 700; }
+    .quiz-option.incorrect { background: rgba(239, 68, 68, 0.2); border-color: #ef4444; }
+    .quiz-explanation {
+      margin-top: 10px; font-size: 13px; color: var(--gold-bright); display: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-surface); border-top: 1px solid var(--border-color);
+      padding: 40px 24px 24px; margin-top: auto; text-align: center; position: relative; z-index: 10;
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 13px;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; cursor: pointer; }
+    .footer-links a:hover { color: var(--gold-bright); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center;
+      z-index: 1000; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: var(--bg-surface); border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-lg); width: 100%; max-width: 620px; max-height: 85vh;
+      overflow-y: auto; padding: 28px; position: relative; color: var(--text-main);
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; background: transparent;
+      border: none; color: var(--gold-bright); font-size: 18px; cursor: pointer;
+    }
+    .modal-box h3 {
+      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 20px;
+      margin-bottom: 14px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;
+    }
+    .modal-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.7; }
+    .contact-input {
+      width: 100%; background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm); padding: 10px 14px; color: var(--text-main);
+      margin-bottom: 12px; outline: none;
+    }
+    .contact-input:focus { border-color: var(--gold-primary); }
+    .btn-submit {
+      background: var(--gold-primary); color: #000; font-weight: 700;
+      padding: 10px 20px; border-radius: var(--radius-sm); border: none; cursor: pointer;
+    }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 600px;
+      margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-md); padding: 16px 20px; display: flex;
+      align-items: center; justify-content: space-between; gap: 16px; z-index: 999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .cookie-banner p { font-size: 13px; color: var(--text-muted); margin: 0; }
+    .cookie-btn {
+      background: var(--gold-primary); color: #000; font-weight: 700;
+      font-size: 12px; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .courses-grid { grid-template-columns: 1fr; }
+      .catalog-controls { flex-direction: column; align-items: stretch; }
+      .search-input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <a href="/" class="brand">
+        <i class="fas fa-graduation-cap"></i>
+        <div>
+          Islamic Academy
+          <span>learn.sakib.bond</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HALALSPARK AD: Header Banner 728x90 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="header-banner" style="width:728px;max-width:96%;height:90px;">
+      <span class="ad-badge">Halalspark Ad Network</span>
+      <div><i class="fas fa-book-quran" style="margin-right:6px;"></i> Certified Quranic Arabic Degrees & Online Ijazah Programs — learn.sakib.bond</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-arabic">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+    <h1>Seek Knowledge from the Cradle to the Grave</h1>
+    <p>"Whoever takes a path upon which he seeks knowledge, Allah makes the path to Paradise easy for him." — Sahih Muslim 2699</p>
+    <div class="hero-stats">
+      <div class="stat-badge"><strong>16+</strong> In-Depth Courses</div>
+      <div class="stat-badge"><strong>8</strong> Disciplines of Knowledge</div>
+      <div class="stat-badge"><strong>100%</strong> Free & Open Access</div>
+    </div>
+  </section>
+
+  <!-- Catalog Controls -->
+  <section class="catalog-controls">
+    <div class="category-pills">
+      <button class="pill active" onclick="filterCategory('all', this)">All Courses</button>
+      <button class="pill" onclick="filterCategory('Quran', this)">Quran & Tajweed</button>
+      <button class="pill" onclick="filterCategory('Hadith', this)">Hadith Studies</button>
+      <button class="pill" onclick="filterCategory('Fiqh', this)">Fiqh of Worship</button>
+      <button class="pill" onclick="filterCategory('Seerah', this)">Prophetic Seerah</button>
+      <button class="pill" onclick="filterCategory('Arabic', this)">Arabic Language</button>
+    </div>
+    <input type="text" class="search-input" id="courseSearch" placeholder="Search courses or topics..." onkeyup="searchCourses()">
+  </section>
+
+  <!-- Course Grid -->
+  <main class="courses-grid" id="coursesGrid">
+    <!-- Populated by JavaScript -->
+  </main>
+
+  <!-- HALALSPARK AD: In-Content 336x280 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="in-content" style="width:336px;max-width:96%;height:220px;">
+      <span class="ad-badge">Halalspark Ad Network</span>
+      <div><i class="fas fa-seedling" style="font-size:24px;margin-bottom:8px;display:block;"></i> Sponsor a Student of Sacred Islamic Knowledge Worldwide</div>
+    </div>
+  </div>
+
+  <!-- Interactive Quiz Section -->
+  <section class="quiz-section">
+    <h2><i class="fas fa-puzzle-piece" style="color:var(--gold-primary);margin-right:8px;"></i> Test Your Knowledge</h2>
+    <p>Complete this quick assessment on fundamental Islamic principles.</p>
+    
+    <div class="quiz-question-box" id="quizBox">
+      <div class="quiz-q-title" id="quizQuestion">Loading question...</div>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-explanation" id="quizExplanation"></div>
+    </div>
+    <div style="text-align:center;">
+      <button class="btn-enroll" onclick="nextQuestion()" id="nextQuizBtn" style="padding:8px 24px;">Next Question <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </section>
+
+  <!-- HALALSPARK AD: Footer Banner 728x90 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="footer-banner" style="width:728px;max-width:96%;height:90px;">
+      <span class="ad-badge">Halalspark Ad</span>
+      <div>Islamic Academic Publishing & Authentic Translation Works — learn.sakib.bond</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a onclick="openModal('privacyModal')">Privacy Policy</a>
+      <a onclick="openModal('termsModal')">Terms of Service</a>
+      <a onclick="openModal('aboutModal')">About Us</a>
+      <a onclick="openModal('contactModal')">Contact Us</a>
+      <a onclick="openModal('disclaimerModal')">Scholarly Disclaimer</a>
+    </div>
+    <div class="footer-copy">
+      Copyright © 2026 <a href="https://learn.sakib.bond" style="color:var(--gold-bright);text-decoration:none;">learn.sakib.bond</a> — All Rights Reserved. Supported by Halalspark Ads.
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="courseDetailModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('courseDetailModal')"><i class="fas fa-times"></i></button>
+      <h3 id="modalCourseTitle">Course Syllabus</h3>
+      <p id="modalCourseInstructor" style="color:var(--gold-bright);font-weight:600;"></p>
+      <p id="modalCourseOverview"></p>
+      <h4 style="color:var(--gold-bright);margin-bottom:8px;">Curriculum Outline:</h4>
+      <ul id="modalCourseCurriculum" style="padding-left:20px;font-size:13px;color:var(--text-muted);margin-bottom:14px;line-height:1.8;"></ul>
+      <button class="btn-enroll" style="width:100%;" onclick="alert('You are enrolled! Study materials are free.');closeModal('courseDetailModal');">Access Course Materials Now</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('privacyModal')"><i class="fas fa-times"></i></button>
+      <h3>Privacy Policy</h3>
+      <p>Welcome to <strong>learn.sakib.bond</strong>. We are committed to maintaining the highest ethical privacy standards.</p>
+      <p><strong>Halalspark Ads:</strong> We integrate Halalspark to present family-friendly, Shariah-compliant educational and business advertisements. Cookies may be used to deliver non-intrusive ads.</p>
+      <p>Contact: admin@learn.sakib.bond</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('termsModal')"><i class="fas fa-times"></i></button>
+      <h3>Terms of Service</h3>
+      <p>All curriculum texts and materials on <strong>learn.sakib.bond</strong> are made freely available for personal enrichment and educational use.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('aboutModal')"><i class="fas fa-times"></i></button>
+      <h3>About Islamic Academy</h3>
+      <p>We believe sacred knowledge should be accessible to all seekers without financial barriers. Our platform structures foundational Islamic studies into intuitive digital learning modules.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('contactModal')"><i class="fas fa-times"></i></button>
+      <h3>Contact Us</h3>
+      <form onsubmit="event.preventDefault(); alert('Message sent successfully!'); closeModal('contactModal');">
+        <input type="text" class="contact-input" placeholder="Your Name" required>
+        <input type="email" class="contact-input" placeholder="Your Email" required>
+        <textarea class="contact-input" rows="4" placeholder="Your Inquiry..." required></textarea>
+        <button type="submit" class="btn-submit">Submit Message</button>
+      </form>
+      <p style="margin-top:10px;font-size:12px;">Email: admin@learn.sakib.bond</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="disclaimerModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('disclaimerModal')"><i class="fas fa-times"></i></button>
+      <h3>Scholarly Disclaimer</h3>
+      <p>The lessons presented are educational summaries of classical Sunni scholarship. For personal legal rulings (fatawa), individuals should consult their local recognized muftis.</p>
+    </div>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p><i class="fas fa-cookie-bite" style="color:var(--gold-bright);margin-right:6px;"></i> We use cookies to track your learning progress and display ethical Halalspark advertisements.</p>
+    <button class="cookie-btn" onclick="acceptCookies()">Accept & Continue</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const courses = [
+      {
+        id: 1,
+        title: "Foundations of Tajweed & Recitation",
+        category: "Quran",
+        instructor: "Shaykh Ahmad Al-Misri",
+        level: "Beginner",
+        duration: "10 Weeks",
+        rating: "4.9",
+        students: "3,420",
+        desc: "Master the articulation points (Makharij) and characteristics (Sifat) of Arabic letters for reverent and accurate recitation of the Holy Quran.",
+        curriculum: ["Introduction to Tajweed Rules", "Makharij: Points of Articulation", "Noon Sakinah & Tanween Rules", "Meem Sakinah Rules", "Mudood (Lengthening Rules)", "Practical Juz Amma Recitation"]
+      },
+      {
+        id: 2,
+        title: "Tafsir of Surah Al-Fatiha & Short Surahs",
+        category: "Quran",
+        instructor: "Dr. Bilal Al-Madani",
+        level: "All Levels",
+        duration: "8 Weeks",
+        rating: "5.0",
+        students: "4,180",
+        desc: "Deeply contemplate the linguistic depths, spiritual meanings, and divine wisdom embedded in the most frequently recited chapters of the Quran.",
+        curriculum: ["The Opening Chapter: Deep Dive", "Surah Ad-Duha & Ash-Sharh", "Surah Al-Qadr & Laylat al-Qadr", "The Three Quls (Ikhlas, Falaq, Nas)", "Implementing Quranic Guidance in Daily Life"]
+      },
+      {
+        id: 3,
+        title: "The Forty Hadith of Imam An-Nawawi",
+        category: "Hadith",
+        instructor: "Ustadh Zaid Rahman",
+        level: "Beginner",
+        duration: "12 Weeks",
+        rating: "4.9",
+        students: "2,890",
+        desc: "Explore the 42 foundational sayings of Prophet Muhammad ﷺ that encapsulate the core essence of Islamic belief, ethics, and jurisprudence.",
+        curriculum: ["Hadith 1: Actions by Intentions", "Hadith 2: The Gabriel Hadith (Islam, Iman, Ihsan)", "Pillars of Faith & Accountability", "Halal, Haram & Doubtful Matters", "Character, Manners & Brotherhood"]
+      },
+      {
+        id: 4,
+        title: "Fiqh of Purification & Prayer (Taharah & Salah)",
+        category: "Fiqh",
+        instructor: "Mufti Tariq Al-Azhari",
+        level: "Beginner",
+        duration: "6 Weeks",
+        rating: "4.8",
+        students: "5,120",
+        desc: "A step-by-step practical jurisprudence guide to valid Wudu, Ghusl, Tayammum, and performing the five daily obligatory prayers perfectly.",
+        curriculum: ["Conditions & Obligations of Wudu", "Rulings of Ghusl & Impurities", "Prerequisites of Valid Salah", "Pillars, Fard & Sunnah Acts of Prayer", "Common Mistakes in Prayer & Prostration of Forgetfulness"]
+      },
+      {
+        id: 5,
+        title: "Seerah: The Makkan & Madinan Period",
+        category: "Seerah",
+        instructor: "Dr. Fatima Al-Zahra",
+        level: "Intermediate",
+        duration: "14 Weeks",
+        rating: "5.0",
+        students: "6,400",
+        desc: "Walk through the inspiring biography of Prophet Muhammad ﷺ from his blessed birth, prophetic call, trials in Makkah, to establishing the Madinan state.",
+        curriculum: ["Pre-Islamic Arabia & Lineage", "The First Revelation at Cave Hira", "Secret & Public Calling in Makkah", "The Year of Sorrow & Isra-Mi'raj", "The Hijrah to Madinah", "Treaties, Character & Final Sermon"]
+      },
+      {
+        id: 6,
+        title: "Quranic Arabic Grammar & Morphology",
+        category: "Arabic",
+        instructor: "Ustadh Faruq Khan",
+        level: "Intermediate",
+        duration: "16 Weeks",
+        rating: "4.9",
+        students: "3,110",
+        desc: "Unlock direct understanding of the Quran without reliance on translations. Covers Nahw (syntax) and Sarf (morphology) with real Quranic examples.",
+        curriculum: ["Noun Types & Definiteness", "Sentence Structure (Nominal & Verbal)", "Verb Conjugation in Past & Present", "Case Endings (I'rab)", "Analyzing Ayat grammatically"]
+      },
+      {
+        id: 7,
+        title: "Aqeedah: The Six Articles of Faith",
+        category: "Hadith",
+        instructor: "Shaykh Hamza Yusuf",
+        level: "Beginner",
+        duration: "8 Weeks",
+        rating: "4.9",
+        students: "3,750",
+        desc: "Understand the orthodox Islamic creed: Belief in Allah's Oneness, Angels, Revealed Scriptures, Prophets, Day of Judgment, and Divine Decree.",
+        curriculum: ["Tawheed: Ruboobiyyah, Uloohiyyah, Asma wa Sifat", "The World of Unseen Angels", "Sacred Books & Revelation", "Prophets and Messengers", "The Afterlife and Eternal Reality", "Al-Qadr (Divine Decree)"]
+      },
+      {
+        id: 8,
+        title: "Islamic Business Ethics & Modern Finance",
+        category: "Fiqh",
+        instructor: "Dr. Monzer Kahf",
+        level: "Advanced",
+        duration: "8 Weeks",
+        rating: "4.7",
+        students: "1,940",
+        desc: "Explore Shariah principles governing contracts, avoidance of Riba (usury) and Gharar (excessive ambiguity), and ethical modern investing.",
+        curriculum: ["Prohibition of Riba & Rationale", "Islamic Contract Models (Murabaha, Mudaraba)", "Halal Equity & Stock Screening", "Cryptocurrency & Modern Islamic Banking", "Zakat on Business Assets"]
+      }
+    ];
+
+    const quizQuestions = [
+      {
+        q: "What is the primary foundation of Islamic faith (Tawheed)?",
+        options: ["Belief that Allah alone is the Creator and sole deity worthy of worship", "Performing charitable deeds only", "Memorizing texts without belief", "Following philosophical theories"],
+        correct: 0,
+        explanation: "Tawheed is the singular fundamental pillar: that Allah is One without partner, equal, or associate."
+      },
+      {
+        q: "Which Surah in the Holy Quran is considered equivalent to one-third of the Quran in reward?",
+        options: ["Surah Al-Fatiha", "Surah Al-Ikhlas", "Surah Ya-Sin", "Surah Al-Mulk"],
+        correct: 1,
+        explanation: "Prophet Muhammad ﷺ stated that Surah Al-Ikhlas equals one-third of the Quran because it purely describes Allah's divine attributes."
+      },
+      {
+        q: "In which city did Prophet Muhammad ﷺ live during the second half of his prophethood after the Hijrah?",
+        options: ["Makkah", "Jerusalem", "Madinah", "Ta'if"],
+        correct: 2,
+        explanation: "The Hijrah was the blessed migration from Makkah to Al-Madinah Al-Munawwarah in 622 CE."
+      },
+      {
+        q: "What percentage of eligible surplus wealth is required for the annual Zakat obligation?",
+        options: ["5.0%", "1.0%", "2.5%", "10.0%"],
+        correct: 2,
+        explanation: "Zakat is calculated at 2.5% (one-fortieth) of eligible savings that exceed the Nisab threshold for a full lunar year."
+      }
+    ];
+
+    let currentQuizIndex = 0;
+    let activeCategory = 'all';
+
+    function renderCourses(list = courses) {
+      const container = document.getElementById('coursesGrid');
+      container.innerHTML = list.map(c => `
+        <div class="course-card">
+          <div>
+            <div class="course-top">
+              <span class="category-badge">${c.category}</span>
+              <span class="level-badge"><i class="fas fa-signal" style="margin-right:4px;"></i>${c.level}</span>
+            </div>
+            <div class="course-title">${c.title}</div>
+            <div class="course-instructor"><i class="fas fa-user-tie"></i> ${c.instructor}</div>
+            <div class="course-desc">${c.desc}</div>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="far fa-clock"></i> ${c.duration}</span>
+              <span><i class="fas fa-user-graduate"></i> ${c.students} Students</span>
+              <span><i class="fas fa-star" style="color:var(--gold-bright);"></i> ${c.rating}</span>
+            </div>
+            <button class="btn-enroll" style="width:100%;" onclick="openCourseModal(${c.id})"><i class="fas fa-book-open" style="margin-right:6px;"></i> View Course Syllabus</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function searchCourses() {
+      const q = document.getElementById('courseSearch').value.toLowerCase().trim();
+      const filtered = courses.filter(c => {
+        const matchesQ = !q || c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q) || c.instructor.toLowerCase().includes(q);
+        const matchesCat = activeCategory === 'all' || c.category === activeCategory;
+        return matchesQ && matchesCat;
+      });
+      renderCourses(filtered);
+    }
+
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      searchCourses();
+    }
+
+    function openCourseModal(id) {
+      const c = courses.find(item => item.id === id);
+      if (!c) return;
+      document.getElementById('modalCourseTitle').innerText = c.title;
+      document.getElementById('modalCourseInstructor').innerText = `Instructor: ${c.instructor} • Level: ${c.level} • Duration: ${c.duration}`;
+      document.getElementById('modalCourseOverview').innerText = c.desc;
+      document.getElementById('modalCourseCurriculum').innerHTML = c.curriculum.map(m => `<li><i class="fas fa-check-circle" style="color:var(--gold-primary);margin-right:6px;"></i> ${m}</li>`).join('');
+      openModal('courseDetailModal');
+    }
+
+    function loadQuiz() {
+      const q = quizQuestions[currentQuizIndex];
+      document.getElementById('quizQuestion').innerText = `Question ${currentQuizIndex + 1} of ${quizQuestions.length}: ${q.q}`;
+      document.getElementById('quizExplanation').style.display = 'none';
+      document.getElementById('quizOptions').innerHTML = q.options.map((opt, i) => `
+        <div class="quiz-option" onclick="checkAnswer(${i}, this)">
+          <strong>${String.fromCharCode(65 + i)}.</strong> ${opt}
+        </div>
+      `).join('');
+    }
+
+    function checkAnswer(selectedIdx, el) {
+      const q = quizQuestions[currentQuizIndex];
+      const allOpts = document.querySelectorAll('.quiz-option');
+      allOpts.forEach(o => o.style.pointerEvents = 'none');
+
+      if (selectedIdx === q.correct) {
+        el.classList.add('correct');
+      } else {
+        el.classList.add('incorrect');
+        allOpts[q.correct].classList.add('correct');
+      }
+
+      const exp = document.getElementById('quizExplanation');
+      exp.innerText = q.explanation;
+      exp.style.display = 'block';
+    }
+
+    function nextQuestion() {
+      currentQuizIndex = (currentQuizIndex + 1) % quizQuestions.length;
+      loadQuiz();
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('themeIcon').className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+      localStorage.setItem('learn_theme', next);
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('active'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+    function acceptCookies() {
+      localStorage.setItem('learn_cookies_accepted', 'true');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('learn_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('themeIcon').className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+      if (localStorage.getItem('learn_cookies_accepted') === 'true') {
+        document.getElementById('cookieBanner').style.display = 'none';
+      }
+
+      renderCourses();
+      loadQuiz();
+    });
+  </script>
+</body>
+</html>
