@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Islamic Academy — Free Online Islamic Education | learn.sakib.bond</title>
-  <meta name="description" content="Learn Islam online. Free courses in Quran recitation, Hadith sciences, Fiqh, Seerah, Arabic language, and Islamic theology on learn.sakib.bond." />
-  <meta name="keywords" content="Islamic learning, learn Islam online, Quran course, Tajweed, Fiqh, Seerah, Arabic grammar, Islamic academy, learn.sakib.bond" />
+  <title>Islamic Academy — Structured Courses, Interactive Lessons & Quizzes | learn.sakib.bond</title>
+  <meta name="description" content="Learn authentic Islamic knowledge online for free. Structured courses in Aqeedah, Salah, Quran & Tajweed, Seerah, Hadith, and Arabic with interactive lesson reader and knowledge quizzes on learn.sakib.bond." />
+  <meta name="keywords" content="Islamic learning, learn Islam, online Islamic academy, Aqeedah course, learn Salah, Tajweed rules, Seerah of Prophet, Islamic quiz, learn.sakib.bond" />
   <meta name="author" content="learn.sakib.bond" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a2463" />
@@ -13,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Islamic Academy — learn.sakib.bond" />
-  <meta property="og:description" content="Structured Islamic education courses, interactive knowledge quizzes, and classical texts." />
+  <meta property="og:description" content="Structured Islamic education courses, interactive lesson reader, progress tracking, and knowledge quizzes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://learn.sakib.bond/" />
   <meta property="og:site_name" content="Islamic Learning Academy" />
@@ -25,7 +25,7 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Schema.org JSON-LD -->
@@ -35,7 +35,7 @@
     "@type": "EducationalOrganization",
     "name": "Islamic Academy",
     "url": "https://learn.sakib.bond",
-    "description": "Comprehensive online Islamic academy providing structured courses in Quran, Fiqh, and Islamic sciences."
+    "description": "Comprehensive online Islamic academy providing structured courses in Quran, Fiqh, and Islamic sciences with interactive lessons and quizzes."
   }
   </script>
 
@@ -90,7 +90,49 @@
       background-size: 26px 26px; pointer-events: none; z-index: 0;
     }
 
-    /* Halalspark Ad styling */
+    /* Header & Nav */
+    header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .navbar {
+      max-width: 1300px; margin: 0 auto; padding: 14px 24px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-main);
+    }
+    .brand i {
+      font-size: 26px; color: var(--gold-bright);
+      filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.4));
+    }
+    .brand div {
+      font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
+      letter-spacing: 0.5px; line-height: 1.1;
+    }
+    .brand span {
+      display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px;
+      color: var(--gold-primary); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .stats-badge {
+      display: flex; align-items: center; gap: 8px; background: var(--bg-card);
+      border: 1px solid var(--border-color); border-radius: 20px; padding: 6px 14px;
+      font-size: 13px; font-weight: 700; color: var(--gold-bright);
+    }
+    .theme-btn {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      color: var(--gold-bright); width: 40px; height: 40px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;
+    }
+    .theme-btn:hover { background: var(--bg-card-hover); border-color: var(--gold-bright); }
+
+    /* Halalspark Ad */
     .halalspark-ad-container {
       width: 100%; display: flex; justify-content: center; margin: 18px 0; position: relative; z-index: 10;
     }
@@ -98,155 +140,228 @@
       border: 1px dashed var(--gold-primary); border-radius: var(--radius-sm);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       background: linear-gradient(135deg, rgba(7, 25, 59, 0.95), rgba(3, 12, 29, 0.95));
-      color: var(--gold-bright); font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3); padding: 10px; text-align: center;
+      color: var(--gold-bright); padding: 12px 20px; text-align: center;
+      font-size: 13px; font-weight: 600; box-shadow: var(--shadow-card);
     }
     .halalspark-ad .ad-badge {
-      font-size: 10px; text-transform: uppercase; padding: 2px 8px;
-      background: rgba(252, 163, 17, 0.15); border-radius: 4px; margin-bottom: 4px; color: var(--text-muted);
+      font-size: 10px; background: rgba(252, 163, 17, 0.2);
+      border: 1px solid var(--gold-primary); color: var(--gold-bright);
+      padding: 2px 8px; border-radius: 4px; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 6px;
     }
-
-    /* Header */
-    header {
-      background: var(--bg-surface); border-bottom: 1px solid var(--border-color);
-      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px);
-    }
-    .navbar {
-      max-width: 1400px; margin: 0 auto; padding: 14px 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .brand {
-      display: flex; align-items: center; gap: 12px; text-decoration: none;
-      color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
-    }
-    .brand i { font-size: 24px; color: var(--gold-primary); }
-    .brand span { font-size: 12px; display: block; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; }
-
-    .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .theme-btn {
-      background: var(--bg-card); border: 1px solid var(--border-color);
-      color: var(--gold-bright); width: 38px; height: 38px; border-radius: 50%;
-      display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;
-    }
-    .theme-btn:hover { background: var(--bg-card-hover); border-color: var(--gold-bright); }
 
     /* Hero */
     .hero {
-      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
-      border-bottom: 1px solid var(--border-color);
-      padding: 44px 24px 36px; text-align: center; position: relative; z-index: 5;
+      text-align: center; padding: 32px 20px 24px; position: relative; z-index: 5; max-width: 900px; margin: 0 auto;
     }
     .hero-arabic {
-      font-family: 'Amiri', serif; font-size: 28px; color: var(--gold-bright);
+      font-family: 'Amiri', serif; font-size: 32px; color: var(--gold-bright);
       margin-bottom: 8px; direction: rtl;
     }
     .hero h1 {
-      font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px);
-      color: var(--gold-bright); margin-bottom: 8px;
+      font-family: 'Cinzel', serif; font-size: 34px; color: var(--text-main);
+      margin-bottom: 10px; letter-spacing: 0.5px;
     }
     .hero p {
-      font-size: 16px; color: var(--text-muted); max-width: 680px; margin: 0 auto 24px;
+      color: var(--text-muted); font-size: 15px; max-width: 720px; margin: 0 auto;
     }
-    .hero-stats {
-      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px;
-    }
-    .stat-badge {
-      background: var(--bg-card); border: 1px solid var(--border-color);
-      padding: 10px 18px; border-radius: var(--radius-md); font-size: 13px;
-    }
-    .stat-badge strong { color: var(--gold-bright); font-size: 18px; display: block; }
 
-    /* Category Filter & Search */
+    /* Course Catalog Section */
+    .catalog-section {
+      max-width: 1300px; margin: 0 auto 40px; padding: 0 24px; position: relative; z-index: 5;
+    }
     .catalog-controls {
-      max-width: 1400px; margin: 0 auto 24px; padding: 0 24px;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
-      position: relative; z-index: 5;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+      gap: 16px; margin-bottom: 24px;
     }
-    .search-input {
-      background: var(--bg-card); border: 1px solid var(--border-color);
-      border-radius: 20px; padding: 8px 18px; color: var(--text-main); font-size: 14px;
-      outline: none; width: 280px;
+    .filter-pills {
+      display: flex; gap: 8px; flex-wrap: wrap;
     }
-    .search-input:focus { border-color: var(--gold-primary); }
-
-    .category-pills { display: flex; gap: 8px; flex-wrap: wrap; }
     .pill {
-      background: var(--bg-card); border: 1px solid var(--border-color);
-      color: var(--text-muted); padding: 6px 14px; border-radius: 20px; font-size: 12px;
-      cursor: pointer; transition: 0.2s;
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.2s;
     }
     .pill:hover, .pill.active {
-      background: var(--gold-primary); color: #000; border-color: var(--gold-primary); font-weight: 600;
+      background: var(--gold-primary); color: #000; border-color: var(--gold-bright); font-weight: 700;
     }
+    .search-box {
+      position: relative; display: flex; align-items: center; min-width: 280px;
+    }
+    .search-box i {
+      position: absolute; left: 14px; color: var(--gold-primary); font-size: 14px;
+    }
+    .search-box input {
+      width: 100%; background: var(--bg-surface); border: 1px solid var(--border-color);
+      border-radius: 20px; padding: 10px 14px 10px 38px; color: var(--text-main);
+      font-size: 14px; outline: none; transition: 0.2s;
+    }
+    .search-box input:focus { border-color: var(--gold-bright); box-shadow: 0 0 10px rgba(251, 191, 36, 0.2); }
 
-    /* Course Cards */
+    /* Courses Grid */
     .courses-grid {
-      max-width: 1400px; margin: 0 auto; padding: 0 24px 40px;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 24px;
-      position: relative; z-index: 5;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px;
     }
     .course-card {
       background: var(--bg-surface); border: 1px solid var(--border-color);
       border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card);
-      display: flex; flex-direction: column; justify-content: space-between;
-      transition: all 0.25s ease;
+      display: flex; flex-direction: column; justify-content: space-between; transition: 0.25s;
     }
-    .course-card:hover { transform: translateY(-5px); border-color: var(--gold-bright); }
+    .course-card:hover { transform: translateY(-4px); border-color: var(--gold-bright); }
     .course-top {
-      display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
     }
     .category-badge {
-      background: rgba(252, 163, 17, 0.15); color: var(--gold-bright);
+      background: rgba(59, 130, 246, 0.2); border: 1px solid var(--blue-accent); color: var(--text-muted);
       font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px;
     }
-    .level-badge { font-size: 12px; color: var(--text-muted); }
+    .level-badge { font-size: 12px; color: var(--gold-primary); font-weight: 600; }
     .course-title {
       font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold-bright);
-      margin-bottom: 8px; line-height: 1.3;
+      margin-bottom: 6px; line-height: 1.3;
     }
     .course-instructor {
       font-size: 13px; color: var(--blue-accent); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
     }
     .course-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+    
+    /* Progress bar on card */
+    .course-progress-wrap {
+      margin-bottom: 16px;
+    }
+    .course-progress-header {
+      display: flex; justify-content: space-between; font-size: 12px; font-weight: 600;
+      color: var(--text-muted); margin-bottom: 6px;
+    }
+    .progress-bar-bg {
+      width: 100%; height: 6px; background: var(--bg-card); border-radius: 4px; overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%; background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));
+      border-radius: 4px; transition: width 0.3s;
+    }
+
     .course-meta {
       display: flex; justify-content: space-between; border-top: 1px solid var(--border-color);
       padding-top: 12px; font-size: 12px; color: var(--text-muted); margin-bottom: 14px;
     }
-    .btn-enroll {
+    .btn-read-course {
       background: var(--blue-primary); border: 1px solid var(--gold-primary);
-      color: var(--gold-bright); padding: 10px; border-radius: var(--radius-sm);
-      font-weight: 600; cursor: pointer; text-align: center; transition: 0.2s;
+      color: var(--gold-bright); padding: 10px 16px; border-radius: var(--radius-sm);
+      font-weight: 700; cursor: pointer; text-align: center; transition: 0.2s; width: 100%;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
     }
-    .btn-enroll:hover { background: var(--gold-primary); color: #000; }
+    .btn-read-course:hover { background: var(--gold-primary); color: #000; }
 
     /* Interactive Quiz Section */
     .quiz-section {
-      max-width: 900px; margin: 40px auto; padding: 32px 24px;
+      max-width: 950px; margin: 20px auto 40px; padding: 32px 24px;
       background: var(--bg-surface); border: 1px solid var(--gold-primary);
       border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
       position: relative; z-index: 5;
     }
-    .quiz-section h2 {
-      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 24px;
-      text-align: center; margin-bottom: 8px;
+    .quiz-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;
     }
-    .quiz-section p { text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+    .quiz-title-box h2 {
+      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 22px;
+    }
+    .quiz-title-box p { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
+    .quiz-score-badge {
+      background: var(--bg-card); border: 1px solid var(--gold-primary);
+      padding: 6px 14px; border-radius: 20px; font-weight: 700; color: var(--gold-bright); font-size: 14px;
+    }
+
     .quiz-question-box {
-      background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; margin-bottom: 20px;
+      background: var(--bg-card); border-radius: var(--radius-md); padding: 22px; margin-bottom: 20px;
     }
-    .quiz-q-title { font-weight: 600; font-size: 16px; margin-bottom: 14px; color: var(--text-main); }
+    .quiz-q-num { font-size: 12px; font-weight: 700; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .quiz-q-title { font-weight: 700; font-size: 16px; margin-bottom: 16px; color: var(--text-main); line-height: 1.5; }
     .quiz-options { display: flex; flex-direction: column; gap: 10px; }
     .quiz-option {
       background: var(--bg-surface); border: 1px solid var(--border-color);
-      padding: 12px 16px; border-radius: var(--radius-sm); cursor: pointer; font-size: 14px;
-      display: flex; align-items: center; gap: 10px; transition: 0.2s;
+      padding: 12px 18px; border-radius: var(--radius-sm); cursor: pointer; font-size: 14px;
+      display: flex; align-items: center; gap: 12px; transition: 0.2s;
     }
     .quiz-option:hover { border-color: var(--gold-primary); background: var(--bg-card-hover); }
-    .quiz-option.correct { background: rgba(16, 185, 129, 0.2); border-color: #10b981; font-weight: 700; }
-    .quiz-option.incorrect { background: rgba(239, 68, 68, 0.2); border-color: #ef4444; }
+    .quiz-option.correct { background: rgba(16, 185, 129, 0.25); border-color: #10b981; font-weight: 700; color: #4ade80; }
+    .quiz-option.incorrect { background: rgba(239, 68, 68, 0.25); border-color: #ef4444; color: #f87171; }
+    
     .quiz-explanation {
-      margin-top: 10px; font-size: 13px; color: var(--gold-bright); display: none;
+      margin-top: 14px; padding: 12px 16px; border-radius: var(--radius-sm);
+      background: rgba(251, 191, 36, 0.12); border-left: 4px solid var(--gold-bright);
+      font-size: 13px; color: var(--text-main); display: none; line-height: 1.5;
     }
+    .quiz-footer {
+      display: flex; justify-content: space-between; align-items: center; margin-top: 16px;
+    }
+    .btn-quiz-nav {
+      background: var(--gold-primary); color: #000; font-weight: 700; border: none;
+      padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; transition: 0.2s;
+    }
+    .btn-quiz-nav:hover { background: var(--gold-bright); }
+
+    /* Lesson Reader Modal */
+    .reader-modal-box {
+      max-width: 820px !important; max-height: 90vh !important;
+    }
+    .lesson-reader-header {
+      border-bottom: 1px solid var(--border-color); padding-bottom: 14px; margin-bottom: 18px;
+    }
+    .lesson-meta {
+      display: flex; gap: 14px; font-size: 12px; color: var(--gold-primary); font-weight: 600; margin-bottom: 6px;
+    }
+    .lesson-title {
+      font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold-bright);
+    }
+    .lesson-tabs {
+      display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 4px;
+    }
+    .lesson-tab {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      color: var(--text-muted); padding: 6px 14px; border-radius: 6px; font-size: 13px;
+      cursor: pointer; white-space: nowrap; transition: 0.2s;
+    }
+    .lesson-tab.active {
+      background: var(--gold-primary); color: #000; font-weight: 700;
+    }
+    .lesson-tab.completed::after {
+      content: ' ✓'; color: #10b981; font-weight: 800;
+    }
+    .lesson-content {
+      line-height: 1.8; font-size: 15px; color: var(--text-main);
+    }
+    .arabic-quote {
+      font-family: 'Amiri', serif; font-size: 24px; color: var(--gold-bright);
+      text-align: right; direction: rtl; margin: 16px 0 8px; padding: 14px 18px;
+      background: var(--bg-card); border-radius: var(--radius-md); border-right: 4px solid var(--gold-primary);
+    }
+    .transliteration {
+      font-style: italic; color: var(--text-muted); font-size: 13px; margin-bottom: 8px;
+    }
+    .bengali-translation {
+      font-family: 'Noto Serif Bengali', serif; color: #86efac; font-size: 14px; margin-bottom: 14px;
+    }
+    .lesson-takeaways {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm); padding: 16px; margin: 18px 0;
+    }
+    .lesson-takeaways h4 {
+      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 15px; margin-bottom: 8px;
+    }
+    .lesson-takeaways ul { margin-left: 20px; font-size: 13px; color: var(--text-muted); }
+    .lesson-takeaways li { margin-bottom: 6px; }
+
+    .lesson-actions {
+      display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color);
+      padding-top: 16px; margin-top: 24px;
+    }
+    .btn-complete-lesson {
+      background: #10b981; color: #fff; font-weight: 700; border: none;
+      padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; transition: 0.2s;
+    }
+    .btn-complete-lesson:hover { background: #059669; }
 
     /* Footer */
     footer {
@@ -260,9 +375,9 @@
     .footer-links a:hover { color: var(--gold-bright); }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
 
-    /* Modals */
+    /* Modals Generic */
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+      position: fixed; inset: 0; background: rgba(0,0,0,0.85);
       backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center;
       z-index: 1000; padding: 20px;
     }
@@ -292,25 +407,11 @@
       padding: 10px 20px; border-radius: var(--radius-sm); border: none; cursor: pointer;
     }
 
-    /* Cookie Banner */
-    .cookie-banner {
-      position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 600px;
-      margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--gold-primary);
-      border-radius: var(--radius-md); padding: 16px 20px; display: flex;
-      align-items: center; justify-content: space-between; gap: 16px; z-index: 999;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-    .cookie-banner p { font-size: 13px; color: var(--text-muted); margin: 0; }
-    .cookie-btn {
-      background: var(--gold-primary); color: #000; font-weight: 700;
-      font-size: 12px; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer;
-      white-space: nowrap;
-    }
-
     @media (max-width: 768px) {
       .courses-grid { grid-template-columns: 1fr; }
       .catalog-controls { flex-direction: column; align-items: stretch; }
-      .search-input { width: 100%; }
+      .search-box { width: 100%; }
+      .hero h1 { font-size: 26px; }
     }
   </style>
 </head>
@@ -328,6 +429,13 @@
         </div>
       </a>
       <div class="nav-actions">
+        <div class="stats-badge" title="Total Lessons Completed & XP">
+          <i class="fas fa-star" style="color:var(--gold-bright);"></i>
+          <span id="userXpDisplay">0 XP</span>
+          <span style="opacity:0.4;">|</span>
+          <i class="fas fa-book-open" style="color:var(--blue-accent);"></i>
+          <span id="userCompletedCount">0 Done</span>
+        </div>
         <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -346,53 +454,67 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-arabic">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
-    <h1>Seek Knowledge from the Cradle to the Grave</h1>
-    <p>"Whoever takes a path upon which he seeks knowledge, Allah makes the path to Paradise easy for him." — Sahih Muslim 2699</p>
-    <div class="hero-stats">
-      <div class="stat-badge"><strong>16+</strong> In-Depth Courses</div>
-      <div class="stat-badge"><strong>8</strong> Disciplines of Knowledge</div>
-      <div class="stat-badge"><strong>100%</strong> Free & Open Access</div>
-    </div>
+    <h1>Structured Islamic Knowledge & Interactive Lessons</h1>
+    <p>"Whoever takes a path upon which he seeks knowledge, Allah makes the path to Paradise easy for him." — Sahih Muslim 2699. Free foundational courses in Aqeedah, Salah, Quran, Seerah, Hadith, and Arabic.</p>
   </section>
 
-  <!-- Catalog Controls -->
-  <section class="catalog-controls">
-    <div class="category-pills">
-      <button class="pill active" onclick="filterCategory('all', this)">All Courses</button>
-      <button class="pill" onclick="filterCategory('Quran', this)">Quran & Tajweed</button>
-      <button class="pill" onclick="filterCategory('Hadith', this)">Hadith Studies</button>
-      <button class="pill" onclick="filterCategory('Fiqh', this)">Fiqh of Worship</button>
-      <button class="pill" onclick="filterCategory('Seerah', this)">Prophetic Seerah</button>
-      <button class="pill" onclick="filterCategory('Arabic', this)">Arabic Language</button>
-    </div>
-    <input type="text" class="search-input" id="courseSearch" placeholder="Search courses or topics..." onkeyup="searchCourses()">
-  </section>
+  <!-- Course Catalog Section -->
+  <section class="catalog-section">
+    <div class="catalog-controls">
+      <div class="filter-pills">
+        <button class="pill active" onclick="filterCategory('all', this)">All Courses</button>
+        <button class="pill" onclick="filterCategory('Aqeedah', this)">Aqeedah (Creed)</button>
+        <button class="pill" onclick="filterCategory('Salah', this)">Salah & Fiqh</button>
+        <button class="pill" onclick="filterCategory('Quran', this)">Quran & Tajweed</button>
+        <button class="pill" onclick="filterCategory('Seerah', this)">Seerah (Biography)</button>
+        <button class="pill" onclick="filterCategory('Hadith', this)">Hadith Sciences</button>
+        <button class="pill" onclick="filterCategory('Arabic', this)">Arabic Essentials</button>
+      </div>
 
-  <!-- Course Grid -->
-  <main class="courses-grid" id="coursesGrid">
-    <!-- Populated by JavaScript -->
-  </main>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="courseSearch" placeholder="Search courses or topics..." oninput="searchCourses()">
+      </div>
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="courses-grid" id="coursesGrid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
 
   <!-- HALALSPARK AD: In-Content 336x280 -->
   <div class="halalspark-ad-container">
     <div class="halalspark-ad" data-ad-slot="in-content" style="width:336px;max-width:96%;height:220px;">
       <span class="ad-badge">Halalspark Ad Network</span>
-      <div><i class="fas fa-seedling" style="font-size:24px;margin-bottom:8px;display:block;"></i> Sponsor a Student of Sacred Islamic Knowledge Worldwide</div>
+      <div><i class="fas fa-mosque" style="font-size:24px;margin-bottom:8px;display:block;"></i> Support Islamic Scholarship & Free Da'wah Worldwide — learn.sakib.bond</div>
     </div>
   </div>
 
   <!-- Interactive Quiz Section -->
   <section class="quiz-section">
-    <h2><i class="fas fa-puzzle-piece" style="color:var(--gold-primary);margin-right:8px;"></i> Test Your Knowledge</h2>
-    <p>Complete this quick assessment on fundamental Islamic principles.</p>
-    
-    <div class="quiz-question-box" id="quizBox">
+    <div class="quiz-header">
+      <div class="quiz-title-box">
+        <h2>Interactive Islamic Knowledge Quiz</h2>
+        <p>Test and reinforce your understanding of core Islamic theology, history, and rulings.</p>
+      </div>
+      <div class="quiz-score-badge">
+        <i class="fas fa-trophy" style="color:var(--gold-bright);margin-right:6px;"></i> Score: <span id="quizScore">0</span> / <span id="quizTotalCount">0</span>
+      </div>
+    </div>
+
+    <div class="quiz-question-box">
+      <div class="quiz-q-num" id="quizQNum">Question 1 of 6</div>
       <div class="quiz-q-title" id="quizQuestion">Loading question...</div>
-      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-options" id="quizOptions">
+        <!-- Populated by JS -->
+      </div>
       <div class="quiz-explanation" id="quizExplanation"></div>
     </div>
-    <div style="text-align:center;">
-      <button class="btn-enroll" onclick="nextQuestion()" id="nextQuizBtn" style="padding:8px 24px;">Next Question <i class="fas fa-arrow-right"></i></button>
+
+    <div class="quiz-footer">
+      <button class="pill" onclick="resetQuiz()"><i class="fas fa-rotate-left"></i> Restart Quiz</button>
+      <button class="btn-quiz-nav" id="btnNextQuiz" onclick="nextQuestion()">Next Question <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
     </div>
   </section>
 
@@ -400,7 +522,7 @@
   <div class="halalspark-ad-container">
     <div class="halalspark-ad" data-ad-slot="footer-banner" style="width:728px;max-width:96%;height:90px;">
       <span class="ad-badge">Halalspark Ad</span>
-      <div>Islamic Academic Publishing & Authentic Translation Works — learn.sakib.bond</div>
+      <div>Master Classical Arabic Vocabulary with Spaced Repetition Flashcards — learn.sakib.bond</div>
     </div>
   </div>
 
@@ -411,32 +533,53 @@
       <a onclick="openModal('termsModal')">Terms of Service</a>
       <a onclick="openModal('aboutModal')">About Us</a>
       <a onclick="openModal('contactModal')">Contact Us</a>
-      <a onclick="openModal('disclaimerModal')">Scholarly Disclaimer</a>
+      <a onclick="openModal('disclaimerModal')">Scholarly Policy</a>
     </div>
     <div class="footer-copy">
-      Copyright © 2026 <a href="https://learn.sakib.bond" style="color:var(--gold-bright);text-decoration:none;">learn.sakib.bond</a> — All Rights Reserved. Supported by Halalspark Ads.
+      Copyright © 2026 <a href="https://learn.sakib.bond" style="color:var(--gold-bright);text-decoration:none;">learn.sakib.bond</a> — All Rights Reserved. Monitored for Halalspark Ad Compliance.
     </div>
   </footer>
 
-  <!-- Modals -->
-  <div class="modal-overlay" id="courseDetailModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('courseDetailModal')"><i class="fas fa-times"></i></button>
-      <h3 id="modalCourseTitle">Course Syllabus</h3>
-      <p id="modalCourseInstructor" style="color:var(--gold-bright);font-weight:600;"></p>
-      <p id="modalCourseOverview"></p>
-      <h4 style="color:var(--gold-bright);margin-bottom:8px;">Curriculum Outline:</h4>
-      <ul id="modalCourseCurriculum" style="padding-left:20px;font-size:13px;color:var(--text-muted);margin-bottom:14px;line-height:1.8;"></ul>
-      <button class="btn-enroll" style="width:100%;" onclick="alert('You are enrolled! Study materials are free.');closeModal('courseDetailModal');">Access Course Materials Now</button>
+  <!-- Lesson Reader Modal -->
+  <div class="modal-overlay" id="lessonReaderModal">
+    <div class="modal-box reader-modal-box">
+      <button class="modal-close" onclick="closeModal('lessonReaderModal')"><i class="fas fa-times"></i></button>
+      <div class="lesson-reader-header">
+        <div class="lesson-meta">
+          <span id="readerCourseCategory">Aqeedah</span> • <span id="readerCourseTitle">Six Articles of Faith</span>
+        </div>
+        <div class="lesson-title" id="readerLessonTitle">Lesson 1: The Meaning of Tawheed</div>
+      </div>
+
+      <!-- Lesson Tabs -->
+      <div class="lesson-tabs" id="readerLessonTabs">
+        <!-- Generated dynamically -->
+      </div>
+
+      <!-- Lesson Body -->
+      <div class="lesson-content" id="readerLessonBody">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="lesson-actions">
+        <button class="btn-action btn-reset" style="width:auto;padding:8px 16px;" onclick="navigateLesson(-1)"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="btn-complete-lesson" id="btnCompleteLesson" onclick="toggleLessonComplete()">
+          <i class="fas fa-check-circle"></i> Mark Lesson Completed
+        </button>
+        <button class="btn-action btn-reset" style="width:auto;padding:8px 16px;" onclick="navigateLesson(1)">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
   </div>
 
+  <!-- Standard Modals -->
   <div class="modal-overlay" id="privacyModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('privacyModal')"><i class="fas fa-times"></i></button>
       <h3>Privacy Policy</h3>
-      <p>Welcome to <strong>learn.sakib.bond</strong>. We are committed to maintaining the highest ethical privacy standards.</p>
-      <p><strong>Halalspark Ads:</strong> We integrate Halalspark to present family-friendly, Shariah-compliant educational and business advertisements. Cookies may be used to deliver non-intrusive ads.</p>
+      <p>Welcome to <strong>learn.sakib.bond</strong>. We are committed to protecting your privacy and digital dignity.</p>
+      <p><strong>Local Progress Tracking:</strong> Your lesson progress, completed topics, and quiz scores are stored entirely on your local browser using HTML5 LocalStorage. No user profile is tracked on central servers.</p>
+      <p><strong>Halalspark Advertising:</strong> We display ethical, family-friendly advertisements using Halalspark.</p>
       <p>Contact: admin@learn.sakib.bond</p>
     </div>
   </div>
@@ -445,7 +588,7 @@
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('termsModal')"><i class="fas fa-times"></i></button>
       <h3>Terms of Service</h3>
-      <p>All curriculum texts and materials on <strong>learn.sakib.bond</strong> are made freely available for personal enrichment and educational use.</p>
+      <p>All curriculum, course materials, and educational tools on <strong>learn.sakib.bond</strong> are made freely available for non-commercial educational use.</p>
     </div>
   </div>
 
@@ -453,7 +596,7 @@
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('aboutModal')"><i class="fas fa-times"></i></button>
       <h3>About Islamic Academy</h3>
-      <p>We believe sacred knowledge should be accessible to all seekers without financial barriers. Our platform structures foundational Islamic studies into intuitive digital learning modules.</p>
+      <p>Islamic Academy (learn.sakib.bond) is an online learning initiative created to make structured, authentic Islamic knowledge easily accessible to every curious seeker and student of knowledge around the globe.</p>
     </div>
   </div>
 
@@ -461,10 +604,10 @@
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('contactModal')"><i class="fas fa-times"></i></button>
       <h3>Contact Us</h3>
-      <form onsubmit="event.preventDefault(); alert('Message sent successfully!'); closeModal('contactModal');">
+      <form onsubmit="event.preventDefault(); alert('JazakAllahu Khair! Your message has been sent to our instructors.'); closeModal('contactModal');">
         <input type="text" class="contact-input" placeholder="Your Name" required>
         <input type="email" class="contact-input" placeholder="Your Email" required>
-        <textarea class="contact-input" rows="4" placeholder="Your Inquiry..." required></textarea>
+        <textarea class="contact-input" rows="4" placeholder="Your Inquiry or Feedback..." required></textarea>
         <button type="submit" class="btn-submit">Submit Message</button>
       </form>
       <p style="margin-top:10px;font-size:12px;">Email: admin@learn.sakib.bond</p>
@@ -474,207 +617,636 @@
   <div class="modal-overlay" id="disclaimerModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('disclaimerModal')"><i class="fas fa-times"></i></button>
-      <h3>Scholarly Disclaimer</h3>
-      <p>The lessons presented are educational summaries of classical Sunni scholarship. For personal legal rulings (fatawa), individuals should consult their local recognized muftis.</p>
+      <h3>Scholarly Review & Authenticity Policy</h3>
+      <p>All materials are compiled strictly from mainstream orthodox Sunni Islamic scholarship (Ahlus Sunnah wal-Jama'ah), cross-referenced with classical tafsir, canonical Hadith collections, and recognized Fiqh works.</p>
     </div>
-  </div>
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner" id="cookieBanner">
-    <p><i class="fas fa-cookie-bite" style="color:var(--gold-bright);margin-right:6px;"></i> We use cookies to track your learning progress and display ethical Halalspark advertisements.</p>
-    <button class="cookie-btn" onclick="acceptCookies()">Accept & Continue</button>
   </div>
 
   <!-- JavaScript -->
   <script>
+    // Comprehensive Course Catalog with Real Interactive Lessons
     const courses = [
       {
         id: 1,
-        title: "Foundations of Tajweed & Recitation",
-        category: "Quran",
-        instructor: "Shaykh Ahmad Al-Misri",
+        title: "Aqeedah: The Foundations of Islamic Faith",
+        category: "Aqeedah",
+        instructor: "Shaykh Hamza Yusuf",
         level: "Beginner",
-        duration: "10 Weeks",
+        duration: "4 Lessons",
         rating: "4.9",
-        students: "3,420",
-        desc: "Master the articulation points (Makharij) and characteristics (Sifat) of Arabic letters for reverent and accurate recitation of the Holy Quran.",
-        curriculum: ["Introduction to Tajweed Rules", "Makharij: Points of Articulation", "Noon Sakinah & Tanween Rules", "Meem Sakinah Rules", "Mudood (Lengthening Rules)", "Practical Juz Amma Recitation"]
+        students: "4,820",
+        desc: "Master the orthodox Islamic creed: Tawheed, the divine attributes of Allah, angels, divine revelation, prophets, and the Day of Judgment.",
+        lessons: [
+          {
+            id: 101,
+            title: "Tawheed & The Three Categories of Monotheism",
+            arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ • اللَّهُ الصَّمَدُ",
+            translit: "Qul huwa Allāhu aḥad • Allāhu ṣ-ṣamad",
+            bengali: "বলুন, তিনিই আল্লাহ, একক ও অদ্বিতীয়। আল্লাহ অমুখাপেক্ষী, সবাই তাঁর মুখাপেক্ষী। (সূরা আল-ইখলাস)",
+            body: `<p>The cornerstone of Islam is <strong>Tawheed</strong> (the absolute Oneness of Allah). Scholars categorize Tawheed into three indivisible dimensions:</p>
+            <ul>
+              <li><strong>Tawheed ar-Ruboobiyyah:</strong> Acknowledging Allah as the sole Creator, Sustainer, and Master of all existence without partner.</li>
+              <li><strong>Tawheed al-Uloohiyyah:</strong> Directing all acts of worship (prayer, dua, sacrifice, repentance) solely to Allah alone.</li>
+              <li><strong>Tawheed al-Asma wa-s-Sifat:</strong> Affirming the beautiful Names and sublime Attributes of Allah as revealed in the Quran and Sunnah, without distortion (tahrif) or resemblance to creation (tashbih).</li>
+            </ul>`,
+            takeaways: [
+              "Shirk (associating partners with Allah) is the only unforgiven sin if one dies upon it.",
+              "True faith requires both conviction in the heart and devotion in action."
+            ]
+          },
+          {
+            id: 102,
+            title: "Belief in the Angels (Mala'ikah)",
+            arabic: "آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ",
+            translit: "Āmana r-rasūlu bimā unzila ilayhi mir-Rabbihī wal-mu'minūn, kullun āmana billāhi wa malā'ikatihī",
+            bengali: "রাসূল বিশ্বাস এনেছেন যা তাঁর পালনকর্তার পক্ষ থেকে অবতীর্ণ হয়েছে এবং মুমিনগণও। সকলেই বিশ্বাস এনেছে আল্লাহর প্রতি এবং তাঁর ফেরেশতাদের প্রতি। (সূরা বাকারা ২:২৮৫)",
+            body: `<p>Angels are created from light (nur), possess noble intellect and absolute obedience, and do not eat, sleep, or disobey Allah. Major angels include:</p>
+            <ul>
+              <li><strong>Jibreel (Gabriel):</strong> Entrusted with conveying divine revelation to the Prophets.</li>
+              <li><strong>Mika'il (Michael):</strong> Charged with rainfall and the provision of sustenance.</li>
+              <li><strong>Israfil:</strong> Assigned to blow the trumpet (Soor) signaling the Day of Resurrection.</li>
+              <li><strong>Malak al-Mawt (Angel of Death):</strong> Responsible for taking souls at their appointed time.</li>
+              <li><strong>Kiram-an Katibeen:</strong> The noble recording scribes on our right and left shoulders.</li>
+            </ul>`,
+            takeaways: [
+              "Every action, speech, and intention is faithfully documented by the scribes.",
+              "Contemplating the angelic realm inspires vigilance and moral integrity."
+            ]
+          },
+          {
+            id: 103,
+            title: "Prophethood & Divine Scriptures",
+            arabic: "وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ",
+            translit: "Wa laqad ba'athnā fī kulli ummatir-rasūlan ani-'budū Llāha waj-tanibū-ṭ-ṭāghūt",
+            bengali: "আর নিশ্চয়ই আমি প্রত্যেক জাতির মধ্যে একজন রাসূল প্রেরণ করেছি এই মর্মে যে, তোমরা আল্লাহর ইবাদত কর এবং তাগুতকে বর্জন কর। (সূরা আন-নাহল ১৬:৩৬)",
+            body: `<p>Allah sent Prophets to guide humanity from darkness to light. Crucial scriptures revealed include:</p>
+            <ul>
+              <li><strong>Tawrat (Torah):</strong> Revealed to Musa (Moses AS).</li>
+              <li><strong>Zabur (Psalms):</strong> Revealed to Dawud (David AS).</li>
+              <li><strong>Injeel (Gospel):</strong> Revealed to Isa (Jesus AS).</li>
+              <li><strong>Quran:</strong> The final, uncorrupted, and eternal word of Allah revealed to Muhammad ﷺ.</li>
+            </ul>`,
+            takeaways: [
+              "Prophet Muhammad ﷺ is the Khatam an-Nabiyyin (Seal of the Prophets).",
+              "The Holy Quran is divinely preserved from all alteration."
+            ]
+          },
+          {
+            id: 104,
+            title: "Al-Qadar (Divine Decree) & The Afterlife",
+            arabic: "إِنَّا كُلَّ شَيْءٍ خَلَقْنَاهُ بِقَدَرٍ",
+            translit: "Innā kulla shay'in khalaqnāhu bi-qadar",
+            bengali: "নিশ্চয়ই আমি প্রতিটি বস্তুকে পরিমিত পরিমাণে সৃষ্টি করেছি। (সূরা আল-ক্বামার ৫৪:৪৯)",
+            body: `<p>Belief in <strong>Al-Qadar</strong> encompasses four pillars:</p>
+            <ol>
+              <li><strong>Al-'Ilm:</strong> Allah's eternal, comprehensive knowledge of everything that has occurred and will occur.</li>
+              <li><strong>Al-Kitabah:</strong> The writing of all decrees in the Preserved Tablet (Al-Lawh Al-Mahfuz).</li>
+              <li><strong>Al-Mashī'ah:</strong> The divine will: whatever Allah wills comes to be, and whatever He does not will never is.</li>
+              <li><strong>Al-Khalq:</strong> Allah is the sole Creator of all beings and actions, while granting humans moral free will and accountability.</li>
+            </ol>`,
+            takeaways: [
+              "Belief in Qadar produces inner tranquility and eliminates anxiety over worldly loss.",
+              "Humans possess genuine agency and will be judged based on their choices."
+            ]
+          }
+        ]
       },
       {
         id: 2,
-        title: "Tafsir of Surah Al-Fatiha & Short Surahs",
-        category: "Quran",
-        instructor: "Dr. Bilal Al-Madani",
-        level: "All Levels",
-        duration: "8 Weeks",
+        title: "Salah: Complete Fiqh & Step-by-Step Practical Guide",
+        category: "Salah",
+        instructor: "Mufti Menk",
+        level: "Beginner",
+        duration: "3 Lessons",
         rating: "5.0",
-        students: "4,180",
-        desc: "Deeply contemplate the linguistic depths, spiritual meanings, and divine wisdom embedded in the most frequently recited chapters of the Quran.",
-        curriculum: ["The Opening Chapter: Deep Dive", "Surah Ad-Duha & Ash-Sharh", "Surah Al-Qadr & Laylat al-Qadr", "The Three Quls (Ikhlas, Falaq, Nas)", "Implementing Quranic Guidance in Daily Life"]
+        students: "6,150",
+        desc: "Learn the conditions, pillars, authentic physical postures, and spiritual presence (Khushu) for all daily prayers.",
+        lessons: [
+          {
+            id: 201,
+            title: "Conditions of Prayer & Authentic Wudu",
+            arabic: "يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ",
+            translit: "Yā ayyuhā-lladhīna āmanū idhā qumtum ilā-ṣ-ṣalāti faghsilū wujūhakum wa aydiyakum ilal-marāfiq",
+            bengali: "হে মুমিনগণ, যখন তোমরা নামাজের জন্য দাঁড়াও, তখন তোমাদের মুখমণ্ডল ও হাতগুলো কনুই পর্যন্ত ধৌত কর... (সূরা আল-মায়িদাহ ৫:৬)",
+            body: `<p>Valid prayer requires fulfilling the prerequisite conditions (Shuroot):</p>
+            <ul>
+              <li><strong>Taharah (Purification):</strong> Wudu from minor impurity, Ghusl from major impurity.</li>
+              <li><strong>Covering the 'Awrah:</strong> Modest apparel covering mandatory boundaries.</li>
+              <li><strong>Facing the Qiblah:</strong> Directed towards the Holy Kaaba in Makkah.</li>
+              <li><strong>Arrival of Prayer Time:</strong> Praying within the prescribed window.</li>
+              <li><strong>Niyyah (Intention):</strong> In the heart for the specific prayer.</li>
+            </ul>`,
+            takeaways: [
+              "Wudu begins with Bismillah and terminates with the Shahadah for the reward of Paradise.",
+              "Physical cleanliness directly nurtures spiritual receptivity."
+            ]
+          },
+          {
+            id: 202,
+            title: "The Essential Pillars (Arkan) of Salah",
+            arabic: "وَقُومُوا لِلَّهِ قَانِتِينَ",
+            translit: "Wa qūmū li-Llāhi qānitīn",
+            bengali: "এবং আল্লাহর সামনে একান্ত বিনীতভাবে দাঁড়াও। (সূরা আল-বাকারা ২:২৩৮)",
+            body: `<p>A pillar is an intrinsic act without which prayer is invalid:</p>
+            <ul>
+              <li><strong>Takbirat al-Ihram:</strong> Uttering "Allahu Akbar" to enter prayer.</li>
+              <li><strong>Qiyam:</strong> Standing upright (if physically capable).</li>
+              <li><strong>Recitation of Surah Al-Fatiha:</strong> Essential in every single Rak'ah.</li>
+              <li><strong>Ruku (Bowing):</strong> With back straight and stillness (Tuma'ninah).</li>
+              <li><strong>Sujud (Prostration):</strong> On seven body parts: forehead/nose, both palms, both knees, and tips of both feet.</li>
+              <li><strong>Final Tashahhud & Tasleem:</strong> Concluding peace to the right and left.</li>
+            </ul>`,
+            takeaways: [
+              "Calm stillness (Tuma'ninah) in bowing and prostration is an absolute obligation.",
+              "The closest a slave is to Allah is during prostration (Sujud)."
+            ]
+          },
+          {
+            id: 203,
+            title: "Attaining Khushu (Spiritual Devotion)",
+            arabic: "قَدْ أَفْلَحَ الْمُؤْمِنُونَ • الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ",
+            translit: "Qad aflaḥa l-mu'minūn • Alladhīna hum fī ṣalātihim khāshi'ūn",
+            bengali: "নিশ্চয়ই মুমিনগণ সফলকাম হয়েছে, যারা নিজেদের নামাজে বিনম্র ও একাগ্র। (সূরা আল-মুমিনুন ২৩:১-২)",
+            body: `<p>Khushu is the heart's humility and complete focus during worship. Methods to develop Khushu:</p>
+            <ul>
+              <li>Contemplate the meanings of the Arabic verses and supplications.</li>
+              <li>Pray as if it were your farewell prayer in this earthly life.</li>
+              <li>Eliminate worldly distractions before stepping onto the prayer mat.</li>
+              <li>Fix gaze upon the spot of prostration.</li>
+            </ul>`,
+            takeaways: [
+              "A person only receives reward for the portion of prayer they were consciously mindful of.",
+              "Slow deliberate recitation elevates the soul."
+            ]
+          }
+        ]
       },
       {
         id: 3,
-        title: "The Forty Hadith of Imam An-Nawawi",
-        category: "Hadith",
-        instructor: "Ustadh Zaid Rahman",
-        level: "Beginner",
-        duration: "12 Weeks",
-        rating: "4.9",
-        students: "2,890",
-        desc: "Explore the 42 foundational sayings of Prophet Muhammad ﷺ that encapsulate the core essence of Islamic belief, ethics, and jurisprudence.",
-        curriculum: ["Hadith 1: Actions by Intentions", "Hadith 2: The Gabriel Hadith (Islam, Iman, Ihsan)", "Pillars of Faith & Accountability", "Halal, Haram & Doubtful Matters", "Character, Manners & Brotherhood"]
+        title: "Quran & Tajweed Rules: From Basics to Mastery",
+        category: "Quran",
+        instructor: "Qari Abdul Basit Academy",
+        level: "Intermediate",
+        duration: "3 Lessons",
+        rating: "4.8",
+        students: "5,340",
+        desc: "Learn Makharij (letter exit points), Noon Sakinah rules, Meem Sakinah, and Madd (elongation) for flawless recitation.",
+        lessons: [
+          {
+            id: 301,
+            title: "Makharij: The Exit Points of Arabic Letters",
+            arabic: "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا",
+            translit: "Wa rattili l-Qur'āna tartīlā",
+            bengali: "এবং সুস্পষ্ট ও সুবিন্যস্তভাবে কুরআন তেলাওয়াত করুন। (সূরা আল-মুযযাম্মিল ৭৩:৪)",
+            body: `<p><strong>Makharij al-Huroof</strong> are the five major articulation zones:</p>
+            <ol>
+              <li><strong>Al-Jawf (The Empty Space in Mouth & Throat):</strong> Prolongation letters (Alif, Waw, Ya).</li>
+              <li><strong>Al-Halq (The Throat):</strong> Deep throat (Hamza, Ha), Middle (Ayn, Haa), Upper (Ghayn, Khaa).</li>
+              <li><strong>Al-Lisan (The Tongue):</strong> Produces 18 letters across 10 exit points.</li>
+              <li><strong>Ash-Shafatayn (The Lips):</strong> Fa, Ba, Meem, Waw.</li>
+              <li><strong>Al-Khayshoom (The Nasal Cavity):</strong> Produces Ghunnah (nasal resonance).</li>
+            </ol>`,
+            takeaways: [
+              "Mastering Makharij prevents distorting the divine word of Allah.",
+              "Consistent listening and practice with a qualified teacher brings perfection."
+            ]
+          },
+          {
+            id: 302,
+            title: "Rules of Noon Sakinah & Tanween",
+            arabic: "مَنْ عَمِلَ صَالِحًا • كِتَابٌ أَنزَلْنَاهُ",
+            translit: "Man 'amila ṣāliḥan • Kitābun anzalnāh",
+            bengali: "যে ব্যক্তি সৎকর্ম করে... এক বরকতময় কিতাব আমি আপনার প্রতি অবতীর্ণ করেছি...",
+            body: `<p>When a quiescent Noon (نْ) or Tanween appears, four rules apply:</p>
+            <ul>
+              <li><strong>Izhar (Clarity):</strong> Pronounced clearly before 6 throat letters (ء هـ ع ح غ خ).</li>
+              <li><strong>Idgham (Merging):</strong> Merged into 6 letters grouped in (يَرْمَلُون). With Ghunnah in (ي ن م و), without Ghunnah in (ل ر).</li>
+              <li><strong>Iqlab (Conversion):</strong> Converted into a hidden Meem with Ghunnah before the letter Ba (ب).</li>
+              <li><strong>Ikhfa (Concealment):</strong> Concealed with nasalization before the remaining 15 letters.</li>
+            </ul>`,
+            takeaways: [
+              "Idgham without Ghunnah applies only when letters meet across two words.",
+              "Tanween behaves phonetically identical to Noon Sakinah in Tajweed."
+            ]
+          },
+          {
+            id: 303,
+            title: "Madd (Elongation) Rules",
+            arabic: "جَاءَ نَصْرُ اللَّهِ • السَّمَاءِ",
+            translit: "Jā'a naṣru Llāhi • As-samā'",
+            bengali: "যখন আল্লাহর সাহায্য আসবে... আকাশমণ্ডলী...",
+            body: `<p>Madd refers to extending the sound of a vowel. Two primary categories:</p>
+            <ul>
+              <li><strong>Madd Asli (Natural Madd):</strong> 2 vowel counts (Harakaat) when no Hamza or Sukoon follows.</li>
+              <li><strong>Madd Far'ee (Secondary Madd):</strong> Caused by a Hamza or Sukoon:
+                <ul>
+                  <li><em>Madd Muttasil:</em> Madd letter and Hamza in the same word (4-5 counts).</li>
+                  <li><em>Madd Munfasil:</em> Madd letter at end of word, Hamza at beginning of next (4-5 counts).</li>
+                  <li><em>Madd Lazim:</em> Followed by permanent Sukoon or Shaddah (6 counts).</li>
+                </ul>
+              </li>
+            </ul>`,
+            takeaways: [
+              "Madd Lazim is mandatory 6 counts without exception.",
+              "Balance in vowel lengths creates the rhythmic beauty of Quranic recitation."
+            ]
+          }
+        ]
       },
       {
         id: 4,
-        title: "Fiqh of Purification & Prayer (Taharah & Salah)",
-        category: "Fiqh",
-        instructor: "Mufti Tariq Al-Azhari",
+        title: "Seerah: The Prophetic Biography & Character",
+        category: "Seerah",
+        instructor: "Dr. Yasir Qadhi",
         level: "Beginner",
-        duration: "6 Weeks",
-        rating: "4.8",
-        students: "5,120",
-        desc: "A step-by-step practical jurisprudence guide to valid Wudu, Ghusl, Tayammum, and performing the five daily obligatory prayers perfectly.",
-        curriculum: ["Conditions & Obligations of Wudu", "Rulings of Ghusl & Impurities", "Prerequisites of Valid Salah", "Pillars, Fard & Sunnah Acts of Prayer", "Common Mistakes in Prayer & Prostration of Forgetfulness"]
+        duration: "3 Lessons",
+        rating: "4.9",
+        students: "7,200",
+        desc: "Journey through the life of Muhammad ﷺ: from the pre-Islamic era and Cave of Hira to the Hijrah and the Farewell Pilgrimage.",
+        lessons: [
+          {
+            id: 401,
+            title: "Early Life in Makkah & The First Revelation",
+            arabic: "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+            translit: "Iqra' bismi Rabbika-lladhī khalaq",
+            bengali: "পাঠ করুন আপনার পালনকর্তার নামে যিনি সৃষ্টি করেছেন। (সূরা আল-আলাক্ব ৯৬:১)",
+            body: `<p>Born an orphan in Makkah in 570 CE, Muhammad ﷺ was known throughout Arabia as <em>Al-Amin</em> (The Trustworthy) and <em>As-Sadiq</em> (The Truthful). Disturbed by idol worship and societal injustice, he retreated to the Cave of Hira for contemplation.</p>
+            <p>At age 40 during Ramadan, the Angel Jibreel appeared with the first revelation: "Read in the Name of your Lord Who created!" Khadijah (RA) comforted him and embraced the faith immediately, becoming the first believer in Islam.</p>`,
+            takeaways: [
+              "Exemplary moral character preceded the mantle of Prophethood.",
+              "Seeking solace in contemplation cleanses the heart before great missions."
+            ]
+          },
+          {
+            id: 402,
+            title: "The Hijrah: Migration to Madinah",
+            arabic: "إِلَّا تَنصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ إِذْ أَخْرَجَهُ الَّذِينَ كَفَرُوا ثَانِيَ اثْنَيْنِ",
+            translit: "Illā tanṣurūhu faqad naṣarahu Llāhu idh akhrajahu-lladhīna kafarū thāniya-thnayn",
+            bengali: "যদি তোমরা তাকে সাহায্য না কর, তবে মনে রেখ, আল্লাহ তাকে সাহায্য করেছিলেন যখন কাফেররা তাকে বহিষ্কার করেছিল... (সূরা আত-তাওবাহ ৯:৪০)",
+            body: `<p>After thirteen years of brutal persecution in Makkah, Allah permitted the believers to migrate to Yathrib (Madinah). Accompanied by Abu Bakr As-Siddiq (RA), the Prophet ﷺ outmaneuvered assassins, took shelter in the Cave of Thawr, and safely arrived in Madinah in 622 CE.</p>
+            <p>In Madinah, he established the <em>Mu'akhah</em> (brotherhood between Muhajirun and Ansar), drafted the historic Constitution of Madinah granting religious freedom, and built the Prophet's Mosque.</p>`,
+            takeaways: [
+              "Hijrah marks the pivotal turning point: the transformation from persecution to community leadership.",
+              "True faith dissolves tribal, national, and ethnic divisions into brotherhood."
+            ]
+          },
+          {
+            id: 403,
+            title: "The Conquest of Makkah & Universal Mercy",
+            arabic: "وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ",
+            translit: "Wa mā arsalnāka illā raḥmatan lil-'ālamīn",
+            bengali: "আমি আপনাকে সমগ্র বিশ্বজগতের জন্য রহমত ও করুণা স্বরূপ প্রেরণ করেছি। (সূরা আল-আম্বিয়া ২১:১০৭)",
+            body: `<p>In the 8th year of Hijrah, the Prophet ﷺ entered Makkah victoriously with 10,000 companions without bloodshed. Standing before the Quraysh leaders who had murdered his family and expelled his followers, he asked: <em>"What do you think I will do with you?"</em></p>
+            <p>They replied: "You are a noble brother, son of a noble brother." He proclaimed: <em>"No blame will there be upon you today. Go, for you are free."</em> He then cleansed the Kaaba of 360 idols, restoring pure monotheism.</p>`,
+            takeaways: [
+              "Forgiving when one possesses the power to retaliate is the ultimate mark of Prophetic character.",
+              "Mercy and justice are the foundational pillars of Islamic society."
+            ]
+          }
+        ]
       },
       {
         id: 5,
-        title: "Seerah: The Makkan & Madinan Period",
-        category: "Seerah",
-        instructor: "Dr. Fatima Al-Zahra",
+        title: "Hadith Sciences: Terminology & Authenticity",
+        category: "Hadith",
+        instructor: "Shaykh Akram Nadwi",
         level: "Intermediate",
-        duration: "14 Weeks",
-        rating: "5.0",
-        students: "6,400",
-        desc: "Walk through the inspiring biography of Prophet Muhammad ﷺ from his blessed birth, prophetic call, trials in Makkah, to establishing the Madinan state.",
-        curriculum: ["Pre-Islamic Arabia & Lineage", "The First Revelation at Cave Hira", "Secret & Public Calling in Makkah", "The Year of Sorrow & Isra-Mi'raj", "The Hijrah to Madinah", "Treaties, Character & Final Sermon"]
+        duration: "2 Lessons",
+        rating: "4.7",
+        students: "3,110",
+        desc: "Understand how Hadith were preserved: Isnad (chains of narration), Matn (text), and grading criteria (Sahih, Hasan, Da'if).",
+        lessons: [
+          {
+            id: 501,
+            title: "Structure of a Hadith: Isnad and Matn",
+            arabic: "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+            translit: "Innamā al-a'mālu bin-niyyāt",
+            bengali: "নিশ্চয়ই প্রতিটি কাজের ফলাফল নিয়তের ওপর নির্ভরশীল। (সহীহ বুখারী ১)",
+            body: `<p>Every authentic narration consists of two essential components:</p>
+            <ul>
+              <li><strong>Isnad (Chain of Transmission):</strong> The verified lineage of narrators who transmitted the report generation after generation from the Prophet ﷺ.</li>
+              <li><strong>Matn (The Actual Text):</strong> The speech, action, tacit approval, or physical description of Prophet Muhammad ﷺ.</li>
+            </ul>
+            <p>Abdullah ibn al-Mubarak famously stated: <em>"The Isnad is part of the religion; were it not for the Isnad, anyone could say whatever they wished."</em></p>`,
+            takeaways: [
+              "The science of Isnad is a uniquely Islamic historical methodology for preserving truth.",
+              "Scholars scrutinized every narrator's memory, honesty, and piety."
+            ]
+          },
+          {
+            id: 502,
+            title: "Authenticity Grading: Sahih, Hasan & Da'if",
+            arabic: "مَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنَ النَّارِ",
+            translit: "Man kadhaba 'alayya muta'ammidan falyatabawwa' maq'adahu minan-nār",
+            bengali: "যে ব্যক্তি ইচ্ছাকৃতভাবে আমার ওপর মিথ্যা আরোপ করবে, সে যেন জাহান্নামে নিজের ঠিকানা বানিয়ে নেয়। (সহীহ বুখারী ১০৭)",
+            body: `<p>For a Hadith to be graded <strong>Sahih (Sound/Authentic)</strong>, it must fulfill five rigorous conditions:</p>
+            <ol>
+              <li>Continuous, unbroken chain of transmission from beginning to end.</li>
+              <li>Integrity ('Adalah) of every single narrator (righteousness, truthfulness).</li>
+              <li>Precision and memory retention (Dabt) of every narrator.</li>
+              <li>Absence of irregularity or contradiction with stronger narrations (Shudhoodh).</li>
+              <li>Absence of subtle damaging defects ('Illah).</li>
+            </ol>`,
+            takeaways: [
+              "Hasan (Good) fulfills all conditions with slightly lesser memory precision.",
+              "Fabricated (Mawdu') reports are completely rejected."
+            ]
+          }
+        ]
       },
       {
         id: 6,
-        title: "Quranic Arabic Grammar & Morphology",
+        title: "Quranic Arabic Essentials & Vocabulary",
         category: "Arabic",
         instructor: "Ustadh Faruq Khan",
-        level: "Intermediate",
-        duration: "16 Weeks",
-        rating: "4.9",
-        students: "3,110",
-        desc: "Unlock direct understanding of the Quran without reliance on translations. Covers Nahw (syntax) and Sarf (morphology) with real Quranic examples.",
-        curriculum: ["Noun Types & Definiteness", "Sentence Structure (Nominal & Verbal)", "Verb Conjugation in Past & Present", "Case Endings (I'rab)", "Analyzing Ayat grammatically"]
-      },
-      {
-        id: 7,
-        title: "Aqeedah: The Six Articles of Faith",
-        category: "Hadith",
-        instructor: "Shaykh Hamza Yusuf",
         level: "Beginner",
-        duration: "8 Weeks",
+        duration: "2 Lessons",
         rating: "4.9",
-        students: "3,750",
-        desc: "Understand the orthodox Islamic creed: Belief in Allah's Oneness, Angels, Revealed Scriptures, Prophets, Day of Judgment, and Divine Decree.",
-        curriculum: ["Tawheed: Ruboobiyyah, Uloohiyyah, Asma wa Sifat", "The World of Unseen Angels", "Sacred Books & Revelation", "Prophets and Messengers", "The Afterlife and Eternal Reality", "Al-Qadr (Divine Decree)"]
-      },
-      {
-        id: 8,
-        title: "Islamic Business Ethics & Modern Finance",
-        category: "Fiqh",
-        instructor: "Dr. Monzer Kahf",
-        level: "Advanced",
-        duration: "8 Weeks",
-        rating: "4.7",
-        students: "1,940",
-        desc: "Explore Shariah principles governing contracts, avoidance of Riba (usury) and Gharar (excessive ambiguity), and ethical modern investing.",
-        curriculum: ["Prohibition of Riba & Rationale", "Islamic Contract Models (Murabaha, Mudaraba)", "Halal Equity & Stock Screening", "Cryptocurrency & Modern Islamic Banking", "Zakat on Business Assets"]
+        students: "4,200",
+        desc: "Unlock the high-frequency words of the Holy Quran, understand root letters, and connect directly with the Divine word.",
+        lessons: [
+          {
+            id: 601,
+            title: "The Three Types of Arabic Words (Kalimah)",
+            arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+            translit: "Al-ḥamdu li-Llāhi Rabbi l-'ālamīn",
+            bengali: "সকল প্রশংসা সমগ্র বিশ্বজগতের পালনকর্তা আল্লাহর জন্য। (সূরা আল-ফাতিহা ১:২)",
+            body: `<p>In Arabic grammar (Nahw), every word in the Quran falls into one of three classes:</p>
+            <ul>
+              <li><strong>Ism (Noun / Name / Adjective):</strong> A word that has meaning in itself and is not bound to time (e.g. الله, كِتَابٌ, رَحِيمٌ).</li>
+              <li><strong>Fi'l (Verb):</strong> A word that indicates an action bound to past, present, or future tense (e.g. خَلَقَ, يَعْلَمُ, اِقْرَأْ).</li>
+              <li><strong>Harf (Particle):</strong> A word whose complete meaning is only apparent when combined with an Ism or Fi'l (e.g. فِي, مِنْ, عَلَى, بِـ).</li>
+            </ul>`,
+            takeaways: [
+              "Mastering these three word classes unlocks Quranic sentence structure.",
+              "Identifying root letters reveals deep contextual meanings."
+            ]
+          },
+          {
+            id: 602,
+            title: "Top 20 High-Frequency Quranic Words",
+            arabic: "رَبّ • أَرْض • سَمَاء • نُور • قَلْب",
+            translit: "Rabb • Arḍ • Samā' • Nūr • Qalb",
+            bengali: "পালনকর্তা • পৃথিবী • আকাশ • জ্যোতি/আলো • অন্তর/হৃদয়",
+            body: `<p>Learning the most frequent vocabulary words enables direct comprehension of over 50% of the Quranic text!</p>
+            <ul>
+              <li><strong>Rabb (رَبّ):</strong> Lord, Sustainer, Nourisher (Repeated 975+ times).</li>
+              <li><strong>Ayah (آيَة):</strong> Sign, Miracle, Verse (Repeated 380+ times).</li>
+              <li><strong>Qalb (قَلْب):</strong> Heart, Spiritual Center (Repeated 160+ times).</li>
+              <li><strong>Yawm (يَوْم):</strong> Day, Period (Repeated 400+ times).</li>
+              <li><strong>'Alim (عَلِيم):</strong> All-Knowing, Omniscient (Repeated 160+ times).</li>
+            </ul>`,
+            takeaways: [
+              "Learning 300 core Quranic words unlocks over 70% of the entire Quranic text.",
+              "Direct Arabic connection transforms prayer and recitation experience."
+            ]
+          }
+        ]
       }
     ];
 
+    // Expanded Knowledge Quizzes
     const quizQuestions = [
       {
         q: "What is the primary foundation of Islamic faith (Tawheed)?",
-        options: ["Belief that Allah alone is the Creator and sole deity worthy of worship", "Performing charitable deeds only", "Memorizing texts without belief", "Following philosophical theories"],
+        options: [
+          "Belief that Allah alone is the Creator and sole deity worthy of all worship",
+          "Performing charitable deeds without internal belief",
+          "Belief in multiple intermediate deities between humanity and God",
+          "Following cultural customs without scriptural evidence"
+        ],
         correct: 0,
-        explanation: "Tawheed is the singular fundamental pillar: that Allah is One without partner, equal, or associate."
+        explanation: "Tawheed (the singular Oneness of Allah in lordship, worship, and attributes) is the core foundation of Islam without which no deed is accepted."
       },
       {
         q: "Which Surah in the Holy Quran is considered equivalent to one-third of the Quran in reward?",
         options: ["Surah Al-Fatiha", "Surah Al-Ikhlas", "Surah Ya-Sin", "Surah Al-Mulk"],
         correct: 1,
-        explanation: "Prophet Muhammad ﷺ stated that Surah Al-Ikhlas equals one-third of the Quran because it purely describes Allah's divine attributes."
+        explanation: "Prophet Muhammad ﷺ stated that Surah Al-Ikhlas (Surah 112) equals one-third of the Quran because it exclusively expounds Allah's sublime divine attributes."
       },
       {
-        q: "In which city did Prophet Muhammad ﷺ live during the second half of his prophethood after the Hijrah?",
-        options: ["Makkah", "Jerusalem", "Madinah", "Ta'if"],
-        correct: 2,
-        explanation: "The Hijrah was the blessed migration from Makkah to Al-Madinah Al-Munawwarah in 622 CE."
+        q: "In which year and to which city did Prophet Muhammad ﷺ migrate during the blessed Hijrah?",
+        options: [
+          "610 CE to Jerusalem",
+          "622 CE to Al-Madinah Al-Munawwarah",
+          "630 CE to Ta'if",
+          "632 CE to Yemen"
+        ],
+        correct: 1,
+        explanation: "The Hijrah took place in 622 CE from Makkah to Al-Madinah Al-Munawwarah, marking Year 1 of the Islamic lunar (Hijri) calendar."
       },
       {
         q: "What percentage of eligible surplus wealth is required for the annual Zakat obligation?",
-        options: ["5.0%", "1.0%", "2.5%", "10.0%"],
+        options: ["5.0%", "1.0%", "2.5% (one-fortieth)", "10.0%"],
         correct: 2,
-        explanation: "Zakat is calculated at 2.5% (one-fortieth) of eligible savings that exceed the Nisab threshold for a full lunar year."
+        explanation: "Zakat is calculated at 2.5% (one-fortieth) of eligible savings and commercial wealth exceeding the Nisab threshold for a full lunar year."
+      },
+      {
+        q: "How many essential articulation zones (Makharij) exist for Arabic letters in Tajweed?",
+        options: ["3 zones", "5 major zones", "7 zones", "12 zones"],
+        correct: 1,
+        explanation: "The five major articulation areas are: Al-Jawf (Oral cavity), Al-Halq (Throat), Al-Lisan (Tongue), Ash-Shafatayn (Lips), and Al-Khayshoom (Nasal passage)."
+      },
+      {
+        q: "What is the science called that examines the authenticity, integrity, and memory of Hadith narrators?",
+        options: [
+          "Ilm al-Rijal (Science of Narrators / Jarh wa Ta'dil)",
+          "Ilm al-Fara'id",
+          "Ilm al-Mantiq",
+          "Ilm al-Bayan"
+        ],
+        correct: 0,
+        explanation: "Ilm al-Rijal (Biographical evaluation of narrators) systematically evaluated every narrator's honesty, character, and precision to safeguard prophetic traditions."
       }
     ];
 
     let currentQuizIndex = 0;
+    let quizScore = 0;
     let activeCategory = 'all';
 
-    function renderCourses(list = courses) {
+    // Current Reader State
+    let currentCourseId = 1;
+    let currentLessonIndex = 0;
+
+    // Local Storage Progress State
+    let userProgress = JSON.parse(localStorage.getItem('learn_completed_lessons') || '[]');
+
+    function saveProgress() {
+      localStorage.setItem('learn_completed_lessons', JSON.stringify(userProgress));
+      updateUserStats();
+      renderCourses();
+    }
+
+    function updateUserStats() {
+      const count = userProgress.length;
+      const xp = count * 50;
+      document.getElementById('userCompletedCount').innerText = `${count} Done`;
+      document.getElementById('userXpDisplay').innerText = `${xp} XP`;
+    }
+
+    function renderCourses(list = null) {
+      if (!list) {
+        const q = document.getElementById('courseSearch')?.value.toLowerCase().trim() || '';
+        list = courses.filter(c => {
+          const matchesQ = !q || c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q) || c.instructor.toLowerCase().includes(q);
+          const matchesCat = activeCategory === 'all' || c.category === activeCategory;
+          return matchesQ && matchesCat;
+        });
+      }
+
       const container = document.getElementById('coursesGrid');
-      container.innerHTML = list.map(c => `
-        <div class="course-card">
-          <div>
-            <div class="course-top">
-              <span class="category-badge">${c.category}</span>
-              <span class="level-badge"><i class="fas fa-signal" style="margin-right:4px;"></i>${c.level}</span>
+      container.innerHTML = list.map(c => {
+        const totalL = c.lessons.length;
+        const doneL = c.lessons.filter(l => userProgress.includes(l.id)).length;
+        const pct = Math.round((doneL / totalL) * 100);
+
+        return `
+          <div class="course-card">
+            <div>
+              <div class="course-top">
+                <span class="category-badge">${c.category}</span>
+                <span class="level-badge"><i class="fas fa-signal" style="margin-right:4px;"></i>${c.level}</span>
+              </div>
+              <div class="course-title">${c.title}</div>
+              <div class="course-instructor"><i class="fas fa-user-tie"></i> ${c.instructor}</div>
+              <div class="course-desc">${c.desc}</div>
+              
+              <div class="course-progress-wrap">
+                <div class="course-progress-header">
+                  <span>Progress (${doneL}/${totalL} Lessons)</span>
+                  <strong style="color:var(--gold-bright);">${pct}%</strong>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: ${pct}%;"></div>
+                </div>
+              </div>
             </div>
-            <div class="course-title">${c.title}</div>
-            <div class="course-instructor"><i class="fas fa-user-tie"></i> ${c.instructor}</div>
-            <div class="course-desc">${c.desc}</div>
-          </div>
-          <div>
-            <div class="course-meta">
-              <span><i class="far fa-clock"></i> ${c.duration}</span>
-              <span><i class="fas fa-user-graduate"></i> ${c.students} Students</span>
-              <span><i class="fas fa-star" style="color:var(--gold-bright);"></i> ${c.rating}</span>
+
+            <div>
+              <div class="course-meta">
+                <span><i class="far fa-clock"></i> ${c.duration}</span>
+                <span><i class="fas fa-user-graduate"></i> ${c.students}</span>
+                <span><i class="fas fa-star" style="color:var(--gold-bright);"></i> ${c.rating}</span>
+              </div>
+              <button class="btn-read-course" onclick="openLessonReader(${c.id}, 0)">
+                <i class="fas fa-book-open"></i> ${doneL > 0 ? 'Continue Reading' : 'Start Course'}
+              </button>
             </div>
-            <button class="btn-enroll" style="width:100%;" onclick="openCourseModal(${c.id})"><i class="fas fa-book-open" style="margin-right:6px;"></i> View Course Syllabus</button>
           </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     function searchCourses() {
-      const q = document.getElementById('courseSearch').value.toLowerCase().trim();
-      const filtered = courses.filter(c => {
-        const matchesQ = !q || c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q) || c.instructor.toLowerCase().includes(q);
-        const matchesCat = activeCategory === 'all' || c.category === activeCategory;
-        return matchesQ && matchesCat;
-      });
-      renderCourses(filtered);
+      renderCourses();
     }
 
     function filterCategory(cat, btn) {
       activeCategory = cat;
-      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.filter-pills .pill').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      searchCourses();
+      renderCourses();
     }
 
-    function openCourseModal(id) {
-      const c = courses.find(item => item.id === id);
+    // Open Lesson Reader
+    function openLessonReader(courseId, lessonIdx = 0) {
+      currentCourseId = courseId;
+      currentLessonIndex = lessonIdx;
+      const c = courses.find(item => item.id === courseId);
       if (!c) return;
-      document.getElementById('modalCourseTitle').innerText = c.title;
-      document.getElementById('modalCourseInstructor').innerText = `Instructor: ${c.instructor} • Level: ${c.level} • Duration: ${c.duration}`;
-      document.getElementById('modalCourseOverview').innerText = c.desc;
-      document.getElementById('modalCourseCurriculum').innerHTML = c.curriculum.map(m => `<li><i class="fas fa-check-circle" style="color:var(--gold-primary);margin-right:6px;"></i> ${m}</li>`).join('');
-      openModal('courseDetailModal');
+
+      document.getElementById('readerCourseCategory').innerText = c.category;
+      document.getElementById('readerCourseTitle').innerText = c.title;
+
+      renderLessonTabs();
+      renderCurrentLesson();
+      openModal('lessonReaderModal');
     }
 
+    function renderLessonTabs() {
+      const c = courses.find(item => item.id === currentCourseId);
+      const container = document.getElementById('readerLessonTabs');
+      container.innerHTML = c.lessons.map((l, idx) => {
+        const isDone = userProgress.includes(l.id);
+        const isActive = idx === currentLessonIndex;
+        return `
+          <button class="lesson-tab ${isActive ? 'active' : ''} ${isDone ? 'completed' : ''}" onclick="selectLesson(${idx})">
+            Lesson ${idx + 1}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectLesson(idx) {
+      currentLessonIndex = idx;
+      renderLessonTabs();
+      renderCurrentLesson();
+    }
+
+    function navigateLesson(step) {
+      const c = courses.find(item => item.id === currentCourseId);
+      const nextIdx = currentLessonIndex + step;
+      if (nextIdx >= 0 && nextIdx < c.lessons.length) {
+        selectLesson(nextIdx);
+      }
+    }
+
+    function renderCurrentLesson() {
+      const c = courses.find(item => item.id === currentCourseId);
+      const l = c.lessons[currentLessonIndex];
+      document.getElementById('readerLessonTitle').innerText = `Lesson ${currentLessonIndex + 1}: ${l.title}`;
+
+      const isDone = userProgress.includes(l.id);
+      const btnComplete = document.getElementById('btnCompleteLesson');
+      if (isDone) {
+        btnComplete.style.background = '#4b5563';
+        btnComplete.innerHTML = '<i class="fas fa-check-double"></i> Completed (Click to Undo)';
+      } else {
+        btnComplete.style.background = '#10b981';
+        btnComplete.innerHTML = '<i class="fas fa-check-circle"></i> Mark Lesson Completed';
+      }
+
+      document.getElementById('readerLessonBody').innerHTML = `
+        <div class="arabic-quote">${l.arabic}</div>
+        <div class="transliteration">${l.translit}</div>
+        <div class="bengali-translation">${l.bengali}</div>
+        <div>${l.body}</div>
+        <div class="lesson-takeaways">
+          <h4><i class="fas fa-lightbulb" style="margin-right:6px;"></i> Core Lessons & Actionable Takeaways</h4>
+          <ul>
+            ${l.takeaways.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    function toggleLessonComplete() {
+      const c = courses.find(item => item.id === currentCourseId);
+      const l = c.lessons[currentLessonIndex];
+
+      if (userProgress.includes(l.id)) {
+        userProgress = userProgress.filter(id => id !== l.id);
+      } else {
+        userProgress.push(l.id);
+      }
+
+      saveProgress();
+      renderLessonTabs();
+      renderCurrentLesson();
+    }
+
+    // Interactive Quiz Logic
     function loadQuiz() {
       const q = quizQuestions[currentQuizIndex];
-      document.getElementById('quizQuestion').innerText = `Question ${currentQuizIndex + 1} of ${quizQuestions.length}: ${q.q}`;
+      document.getElementById('quizTotalCount').innerText = quizQuestions.length;
+      document.getElementById('quizScore').innerText = quizScore;
+      document.getElementById('quizQNum').innerText = `Question ${currentQuizIndex + 1} of ${quizQuestions.length}`;
+      document.getElementById('quizQuestion').innerText = q.q;
       document.getElementById('quizExplanation').style.display = 'none';
+
       document.getElementById('quizOptions').innerHTML = q.options.map((opt, i) => `
         <div class="quiz-option" onclick="checkAnswer(${i}, this)">
-          <strong>${String.fromCharCode(65 + i)}.</strong> ${opt}
+          <strong>${String.fromCharCode(65 + i)}.</strong> <span>${opt}</span>
         </div>
       `).join('');
     }
@@ -686,18 +1258,26 @@
 
       if (selectedIdx === q.correct) {
         el.classList.add('correct');
+        quizScore++;
+        document.getElementById('quizScore').innerText = quizScore;
       } else {
         el.classList.add('incorrect');
         allOpts[q.correct].classList.add('correct');
       }
 
       const exp = document.getElementById('quizExplanation');
-      exp.innerText = q.explanation;
+      exp.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
       exp.style.display = 'block';
     }
 
     function nextQuestion() {
       currentQuizIndex = (currentQuizIndex + 1) % quizQuestions.length;
+      loadQuiz();
+    }
+
+    function resetQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
       loadQuiz();
     }
 
@@ -712,20 +1292,12 @@
     function openModal(id) { document.getElementById(id).classList.add('active'); }
     function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
-    function acceptCookies() {
-      localStorage.setItem('learn_cookies_accepted', 'true');
-      document.getElementById('cookieBanner').style.display = 'none';
-    }
-
     window.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('learn_theme') || 'dark';
       document.documentElement.setAttribute('data-theme', savedTheme);
       document.getElementById('themeIcon').className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
 
-      if (localStorage.getItem('learn_cookies_accepted') === 'true') {
-        document.getElementById('cookieBanner').style.display = 'none';
-      }
-
+      updateUserStats();
       renderCourses();
       loadQuiz();
     });
